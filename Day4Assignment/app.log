@@ -1,0 +1,417 @@
+[DEBUG] 2021-09-21 11:04:26,029 main            com.target.training.Assignment18.programs.ConnectToDatabase [  15] These JDBC drivers are registered with Driver Manager
+[DEBUG] 2021-09-21 11:04:26,040 main            com.target.training.Assignment18.programs.ConnectToDatabase [  17] org.h2.Driver@74a10858
+[DEBUG] 2021-09-21 11:06:11,351 main            com.target.training.Assignment18.programs.ConnectToDatabase [  15] These JDBC drivers are registered with Driver Manager
+[DEBUG] 2021-09-21 11:06:11,364 main            com.target.training.Assignment18.programs.ConnectToDatabase [  17] org.h2.Driver
+[DEBUG] 2021-09-21 11:08:23,903 main            com.target.training.Assignment18.programs.ConnectToDatabase [  18] These JDBC drivers are registered with Driver Manager
+[DEBUG] 2021-09-21 11:08:23,916 main            com.target.training.Assignment18.programs.ConnectToDatabase [  20] org.h2.Driver
+[DEBUG] 2021-09-21 11:08:23,977 main            com.target.training.Assignment18.programs.ConnectToDatabase [  24] got an object of type org.h2.jdbc.JdbcConnection for the variable con 
+[DEBUG] 2021-09-21 11:09:36,855 main            com.target.training.Assignment18.programs.ConnectToDatabase [  18] These JDBC drivers are registered with Driver Manager
+[DEBUG] 2021-09-21 11:09:36,887 main            com.target.training.Assignment18.programs.ConnectToDatabase [  20] org.postgresql.Driver
+[DEBUG] 2021-09-21 11:09:36,887 main            com.target.training.Assignment18.programs.ConnectToDatabase [  20] org.h2.Driver
+[DEBUG] 2021-09-21 11:09:36,933 main            com.target.training.Assignment18.programs.ConnectToDatabase [  24] got an object of type org.h2.jdbc.JdbcConnection for the variable con 
+[DEBUG] 2021-09-21 11:15:07,412 main            com.target.training.Assignment18.programs.ConnectToDatabase [  18] These JDBC drivers are registered with Driver Manager
+[DEBUG] 2021-09-21 11:15:07,448 main            com.target.training.Assignment18.programs.ConnectToDatabase [  20] org.postgresql.Driver
+[DEBUG] 2021-09-21 11:15:07,448 main            com.target.training.Assignment18.programs.ConnectToDatabase [  20] com.mysql.cj.jdbc.Driver
+[DEBUG] 2021-09-21 11:15:07,448 main            com.target.training.Assignment18.programs.ConnectToDatabase [  20] org.h2.Driver
+[DEBUG] 2021-09-21 11:15:07,508 main            com.target.training.Assignment18.programs.ConnectToDatabase [  24] got an object of type org.h2.jdbc.JdbcConnection for the variable con 
+[DEBUG] 2021-09-21 11:44:25,293 main            com.target.training.Assignment18.programs.CreateTable [  21] SQL Command executed successfully
+[ERROR] 2021-09-21 11:53:49,595 main            com.target.training.Assignment18.programs.CreateTable [  25] There was an error
+org.h2.jdbc.JdbcSQLException: Table "PRODUCTS" already exists; SQL statement:
+create table products(id integer primary key,firstname varchar(50) not null,
+) [42101-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:399)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:20)
+[ERROR] 2021-09-21 12:06:57,942 main            com.target.training.Assignment18.programs.AddProductRecords [  42] Error while acquiring db resources 
+java.util.InputMismatchException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
+	at java.base/java.util.Scanner.next(Scanner.java:1594)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
+	at com.target.training.Assignment18.util.KeyBoardUtil.getInt(KeyBoardUtil.java:18)
+	at com.target.training.Assignment18.programs.AddProductRecords.main(AddProductRecords.java:26)
+[ERROR] 2021-09-21 12:08:34,204 main            com.target.training.Assignment18.programs.AddProductRecords [  42] Error while acquiring db resources 
+java.util.InputMismatchException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
+	at java.base/java.util.Scanner.next(Scanner.java:1594)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
+	at com.target.training.Assignment18.util.KeyBoardUtil.getInt(KeyBoardUtil.java:18)
+	at com.target.training.Assignment18.programs.AddProductRecords.main(AddProductRecords.java:26)
+[DEBUG] 2021-09-21 12:31:01,080 main            com.target.training.Assignment18.programs.SqlInjectionSimulation [  14] select * from users where username ='hari' and password='irah'
+[ERROR] 2021-09-21 12:41:22,261 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  42] Error while acquiring db resources 
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+insert into products values (?, ?, ?) [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:22)
+[ERROR] 2021-09-21 12:47:30,708 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  45] Error while acquiring db resources 
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+insert into products values (?, ?, ?) [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:22)
+[ERROR] 2021-09-21 12:49:00,428 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  45] Error while acquiring db resources 
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+insert into products values (?, ?, ?) [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:22)
+[DEBUG] 2021-09-21 12:49:48,095 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  33] New product added successfully id =13, firstname=rohit
+[DEBUG] 2021-09-21 21:57:43,216 main            com.target.training.Assignment18.programs.CreateTable [  33] SQL Command executed successfully
+[ERROR] 2021-09-21 22:43:23,498 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  67] Error while acquiring db resources 
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+insert into products values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:24)
+[ERROR] 2021-09-21 22:44:14,963 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  67] Error while acquiring db resources 
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+insert into products values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:24)
+[ERROR] 2021-09-21 22:44:32,036 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  67] Error while acquiring db resources 
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+insert into products values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [21002-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:306)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:271)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:165)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:623)
+	at org.h2.command.CommandRemote.prepare(CommandRemote.java:85)
+	at org.h2.command.CommandRemote.<init>(CommandRemote.java:51)
+	at org.h2.engine.SessionRemote.prepareCommand(SessionRemote.java:493)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:304)
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:24)
+[ERROR] 2021-09-21 22:46:53,554 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  67] Error while acquiring db resources 
+java.lang.ClassCastException: class java.util.Date cannot be cast to class java.sql.Date (java.util.Date is in module java.base of loader 'bootstrap'; java.sql.Date is in module java.sql of loader 'platform')
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:52)
+[ERROR] 2021-09-21 22:50:20,829 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  68] Error while acquiring db resources 
+java.text.ParseException: Unparseable date: "09/12/1222"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:395)
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:40)
+[ERROR] 2021-09-21 22:52:41,143 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  68] Error while acquiring db resources 
+java.lang.ClassCastException: class java.util.Date cannot be cast to class java.sql.Date (java.util.Date is in module java.base of loader 'bootstrap'; java.sql.Date is in module java.sql of loader 'platform')
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:53)
+[ERROR] 2021-09-21 22:58:54,500 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  68] Error while acquiring db resources 
+java.lang.IllegalArgumentException
+	at java.sql/java.sql.Date.valueOf(Date.java:141)
+	at com.target.training.Assignment18.programs.PreparedStatementDemo.main(PreparedStatementDemo.java:53)
+[DEBUG] 2021-09-21 23:00:47,545 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  56] New product added successfully id =897, firstname=iuiu
+[ERROR] 2021-09-22 10:39:28,450 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+java.sql.SQLException: Access denied for user 'root'@'172.17.0.1' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.training.Assignment18.util.Dbutil.createConnection(Dbutil.java:20)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:29)
+[ERROR] 2021-09-22 10:39:55,298 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Bangalore,state varchar(20) default Karnataka,pincode integer not null,country v' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:32)
+[ERROR] 2021-09-22 10:41:17,459 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+java.sql.SQLException: No suitable driver found for jdbc:postgres://localhost:2345/target_training_db
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.training.Assignment18.util.Dbutil.createConnection(Dbutil.java:20)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:29)
+[ERROR] 2021-09-22 10:42:43,283 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Bangalore,state varchar(20) default Karnataka,pincode integer not null,country v' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:32)
+[ERROR] 2021-09-22 10:43:36,340 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Bangalore,state varchar(20) default Karnataka,pincode integer not null,country v' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:764)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:32)
+[DEBUG] 2021-09-22 10:44:09,752 main            com.target.training.Assignment18.programs.CreateTable [  33] SQL Command executed successfully
+[ERROR] 2021-09-22 10:47:06,018 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+java.sql.SQLException: No suitable driver found for jdbc:postgres://localhost:2345/target_training_db
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.training.Assignment18.util.Dbutil.createConnection(Dbutil.java:20)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:29)
+[ERROR] 2021-09-22 10:56:24,035 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "root"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.training.Assignment18.util.Dbutil.createConnection(Dbutil.java:20)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:29)
+[ERROR] 2021-09-22 11:05:26,273 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "root"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at com.target.training.Assignment18.util.Dbutil.createConnection(Dbutil.java:20)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:29)
+[DEBUG] 2021-09-22 11:06:30,296 main            com.target.training.Assignment18.programs.CreateTable [  33] SQL Command executed successfully
+[ERROR] 2021-09-22 11:06:39,216 main            com.target.training.Assignment18.programs.CreateTable [  37] There was an error
+org.postgresql.util.PSQLException: ERROR: relation "contacts" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.target.training.Assignment18.programs.CreateTable.main(CreateTable.java:32)
+[DEBUG] 2021-09-22 11:14:03,384 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  55] New product added successfully id =6, firstname=hari
+[DEBUG] 2021-09-22 11:15:48,211 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  55] New product added successfully id =45, firstname=rohit
+[DEBUG] 2021-09-22 11:16:54,745 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  55] New product added successfully id =12, firstname=viaks
+[DEBUG] 2021-09-22 11:19:47,881 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  55] New product added successfully id =6, firstname=harinath
+[DEBUG] 2021-09-22 11:20:58,897 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  55] New product added successfully id =41, firstname=poojitha
+[DEBUG] 2021-09-22 11:21:59,609 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  55] New product added successfully id =28, firstname=pranjal
+[DEBUG] 2021-09-22 11:22:51,783 main            com.target.training.Assignment18.programs.PreparedStatementDemo [  55] New product added successfully id =18, firstname=satish
+[DEBUG] 2021-09-22 11:42:40,017 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 6, name = harinath
+[DEBUG] 2021-09-22 11:44:17,327 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 6, name = harinath
+[DEBUG] 2021-09-22 11:44:17,329 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 18, name = satish
+[DEBUG] 2021-09-22 11:44:17,329 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 28, name = pranjal
+[DEBUG] 2021-09-22 11:44:17,329 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 41, name = poojitha
+[DEBUG] 2021-09-22 11:46:02,586 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 6, name = hari
+[DEBUG] 2021-09-22 11:46:02,587 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 45, name = rohit
+[DEBUG] 2021-09-22 11:46:02,587 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 12, name = viaks
+[DEBUG] 2021-09-22 11:50:01,422 main            com.target.training.Assignment18.programs.GetTableRecords [  24] id = 897, name = iuiu
+[DEBUG] 2021-09-22 12:05:34,487 main            com.target.training.Assignment18.programs.GetProductById [  25] id =6, name = harinath
+[ WARN] 2021-09-22 12:05:44,454 main            com.target.training.Assignment18.programs.GetProductById [  28] No contact data is available for id = 45
+[DEBUG] 2021-09-22 12:06:19,601 main            com.target.training.Assignment18.programs.GetProductById [  25] id =28, name = pranjal
+[ERROR] 2021-09-22 14:53:34,466 main            com.target.training.Assignment18.dao.JdbcApplication [  49] Error while acquiring db resources 
+java.lang.ClassCastException: class java.util.Date cannot be cast to class java.sql.Date (java.util.Date is in module java.base of loader 'bootstrap'; java.sql.Date is in module java.sql of loader 'platform')
+	at com.target.training.Assignment18.dao.JdbcApplication.addContact(JdbcApplication.java:43)
+	at com.target.training.Assignment18.programs.ContactsApp.addContactDetails(ContactsApp.java:121)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:38)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ WARN] 2021-09-22 15:00:43,613 main            com.target.training.Assignment18.dao.JdbcApplication [ 241] Error while acquiring db resources 
+java.lang.ClassCastException: class java.util.Date cannot be cast to class java.sql.Date (java.util.Date is in module java.base of loader 'bootstrap'; java.sql.Date is in module java.sql of loader 'platform')
+	at com.target.training.Assignment18.dao.JdbcApplication.getContactsByBirthDate(JdbcApplication.java:230)
+	at com.target.training.Assignment18.programs.ContactsApp.searchByDateOfBirthRange(ContactsApp.java:233)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:59)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ WARN] 2021-09-22 15:10:23,571 main            com.target.training.Assignment18.dao.JdbcApplication [ 246] Error while acquiring db resources 
+java.lang.IllegalArgumentException
+	at java.sql/java.sql.Date.valueOf(Date.java:141)
+	at com.target.training.Assignment18.dao.JdbcApplication.getContactsByBirthDate(JdbcApplication.java:232)
+	at com.target.training.Assignment18.programs.ContactsApp.searchByDateOfBirthRange(ContactsApp.java:233)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:59)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ WARN] 2021-09-22 15:14:17,461 main            com.target.training.Assignment18.dao.JdbcApplication [ 247] Error while acquiring db resources 
+java.sql.SQLException: No value specified for parameter 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:396)
+	at com.target.training.Assignment18.dao.JdbcApplication.getContactsByBirthDate(JdbcApplication.java:238)
+	at com.target.training.Assignment18.programs.ContactsApp.searchByDateOfBirthRange(ContactsApp.java:233)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:59)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ERROR] 2021-09-22 15:19:23,726 main            com.target.training.Assignment18.dao.JdbcApplication [  51] Error while acquiring db resources 
+java.lang.IllegalArgumentException
+	at java.sql/java.sql.Date.valueOf(Date.java:141)
+	at com.target.training.Assignment18.dao.JdbcApplication.addContact(JdbcApplication.java:44)
+	at com.target.training.Assignment18.programs.ContactsApp.addContactDetails(ContactsApp.java:121)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:38)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[DEBUG] 2021-09-22 15:21:57,516 main            com.target.training.Assignment18.dao.JdbcApplication [  48] New product added successfully ....
+[ERROR] 2021-09-22 16:08:23,807 main            com.target.training.Assignment18.dao.JdbcApplication [  73] error while acquiring data 
+java.lang.IllegalArgumentException: No enum constant com.target.training.Assignment18.entity.Gender.gender
+	at java.base/java.lang.Enum.valueOf(Enum.java:240)
+	at com.target.training.Assignment18.entity.Gender.valueOf(Gender.java:3)
+	at com.target.training.Assignment18.dao.JdbcApplication.getContact(JdbcApplication.java:70)
+	at com.target.training.Assignment18.programs.ContactsApp.updateContact(ContactsApp.java:264)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:65)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ERROR] 2021-09-22 16:10:16,642 main            com.target.training.Assignment18.dao.JdbcApplication [  73] error while acquiring data 
+java.lang.IllegalArgumentException: No enum constant com.target.training.Assignment18.entity.Gender.gender
+	at java.base/java.lang.Enum.valueOf(Enum.java:240)
+	at com.target.training.Assignment18.entity.Gender.valueOf(Gender.java:3)
+	at com.target.training.Assignment18.dao.JdbcApplication.getContact(JdbcApplication.java:70)
+	at com.target.training.Assignment18.programs.ContactsApp.updateContact(ContactsApp.java:264)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:65)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ERROR] 2021-09-22 16:15:08,125 main            com.target.training.Assignment18.dao.JdbcApplication [  73] error while acquiring data 
+java.lang.IllegalArgumentException: No enum constant com.target.training.Assignment18.entity.Gender.gender
+	at java.base/java.lang.Enum.valueOf(Enum.java:240)
+	at com.target.training.Assignment18.entity.Gender.valueOf(Gender.java:3)
+	at com.target.training.Assignment18.dao.JdbcApplication.getContact(JdbcApplication.java:70)
+	at com.target.training.Assignment18.programs.ContactsApp.updateContact(ContactsApp.java:264)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:65)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[DEBUG] 2021-09-22 16:16:30,821 main            com.target.training.Assignment18.dao.JdbcApplication [ 250] The contact of id ={} has been deleted successfully
+[ERROR] 2021-09-22 17:36:09,949 main            com.target.training.Assignment18.dao.JdbcApplication [  86] Error occurred while acquiring db resources
+java.sql.SQLSyntaxErrorException: Unknown column 'anushka' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.target.training.Assignment18.dao.JdbcApplication.updateColumn(JdbcApplication.java:84)
+	at com.target.training.Assignment18.dao.JdbcApplication.updateContact(JdbcApplication.java:102)
+	at com.target.training.Assignment18.programs.ContactsApp.updateContact(ContactsApp.java:309)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:65)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ERROR] 2021-09-22 17:37:52,244 main            com.target.training.Assignment18.dao.JdbcApplication [  87] Error occurred while acquiring db resources
+java.sql.SQLSyntaxErrorException: Unknown column 'anushka' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.target.training.Assignment18.dao.JdbcApplication.updateColumn(JdbcApplication.java:85)
+	at com.target.training.Assignment18.dao.JdbcApplication.updateContact(JdbcApplication.java:103)
+	at com.target.training.Assignment18.programs.ContactsApp.updateContact(ContactsApp.java:309)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:65)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ERROR] 2021-09-22 17:55:14,185 main            com.target.training.Assignment18.dao.JdbcApplication [  73] error while acquiring data 
+java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:517)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1314)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:822)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:843)
+	at com.target.training.Assignment18.dao.JdbcApplication.getContact(JdbcApplication.java:70)
+	at com.target.training.Assignment18.programs.ContactsApp.updateContact(ContactsApp.java:308)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:65)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
+[ERROR] 2021-09-22 18:01:26,910 main            com.target.training.Assignment18.dao.JdbcApplication [  73] error while acquiring data 
+java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:517)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1314)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:822)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:843)
+	at com.target.training.Assignment18.dao.JdbcApplication.getContact(JdbcApplication.java:70)
+	at com.target.training.Assignment18.programs.ContactsApp.updateContact(ContactsApp.java:311)
+	at com.target.training.Assignment18.programs.ContactsApp.start(ContactsApp.java:65)
+	at com.target.training.Assignment18.programs.ContactsApp.main(ContactsApp.java:22)
